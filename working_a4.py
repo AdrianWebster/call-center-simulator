@@ -1,10 +1,10 @@
-import numpy
+import numpy as np
 
 
 def generateCallsIn(workDayMinutes):
     arrivals = [np.random.exponential(2)]
-    while sum(arrivals) < workDayMinutes:
-        arrivals.append(np.random.exponential(2))
+    while arrivals[-1] < workDayMinutes:
+        arrivals.append(arrivals[-1]+np.random.exponential(2))
 
     if arrivals[-1] > 480:
         del arrivals[-1]
@@ -12,10 +12,10 @@ def generateCallsIn(workDayMinutes):
     return arrivals
 
 
-def generateServiceTimes(m):
+def generateServiceTimes(m,speed):
     service = []
     for i in range(m):
-        service.append(numpy.random.exponential(3))
+        service.append(np.random.exponential(speed))
     return service
 
 
@@ -35,13 +35,14 @@ def lineBusy(call,array):
     return False, len(array)
 
 
-def main():
+def main(speed):
     workDayMinutes = 480
     callArray = generateCallsIn(workDayMinutes)
-    serviceArray = generateServiceTimes(len(callArray))
+    serviceArray = generateServiceTimes(len(callArray),speed)
 
     dropped = []
     completed = []
+    timeOnHold = []
 
     for x in range(len(callArray)):
         call = callArray[x]
@@ -57,17 +58,46 @@ def main():
                 if line3[0]:
                     dropped.append(call)
                 else:
-                    print("Completitng the call at time " + str(call) + " on hold line")
-                    completedCallCall = [call, (completed[-1][1]) + service]
+                    print("Completing the call at time " + str(call) + " on hold line")
+                    completionTime = (completed[-1][1]) + service
+                    timeOnHold.append(completionTime-call)
+                    completedCall = [call,completionTime]
                     completed.append(completedCall)
+
             else:
-                print("Completitng the call at time " + str(call) + " on line 2")
+                print("Completing the call at time " + str(call) + " on line 2")
                 completedCall = completeCall(service, call)
                 completed.append(completedCall)
         else:
-            print("Completitng the call at time " + str(call) + " on line 1")
+            print("Completing the call at time " + str(call) + " on line 1")
             completedCall = completeCall(service, call)
             completed.append(completedCall)
 
-    return completed,dropped,callArray,serviceArray
+    return completed,dropped,callArray,serviceArray, timeOnHold
 
+
+def replications(n,speed):
+    results = []
+    for i in range(n):
+        temp = main(speed)
+        results.append(temp)
+    return results
+
+def percentLost(results):
+    total = 0
+    lost =  0
+
+    for i in range(len(results)):
+        total = total + len(results[i][2])
+        lost = lost + len(results[i][1])
+
+    return lost/total
+
+def avgHoldingTime(results):
+    holdingTimesTotal = []
+
+    for i in range(len(results)): # for every replication
+        holdingTimes =  results[i][4]
+        holdingTimesTotal += holdingTimes
+
+    return np.mean(holdingTimesTotal)
