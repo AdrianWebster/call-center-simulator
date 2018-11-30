@@ -1,5 +1,5 @@
 import numpy as np
-
+import statsmodels.stats.api as sms
 
 def generateCallsIn(workDayMinutes):
     arrivals = [np.random.exponential(2)]
@@ -86,12 +86,18 @@ def replications(n,speed):
 def percentLost(results):
     total = 0
     lost =  0
-
+    averages = []
     for i in range(len(results)):
-        total = total + len(results[i][2])
-        lost = lost + len(results[i][1])
+        instTotal = len(results[i][2])
+        instLost = len(results[i][1])
+        total = total + instTotal
+        lost = lost + instLost
+        averages.append(instTotal/instLost)
 
-    return lost/total
+    print('Average Holding time: ' + str(total/lost))
+    print('C.I at 95%: ' + str(sms.DescrStatsW(averages).tconfint_mean(.05)))
+    print('C.I at 99%: ' + str(sms.DescrStatsW(averages).tconfint_mean(.01)))
+
 
 def avgHoldingTime(results):
     holdingTimesTotal = []
@@ -100,4 +106,6 @@ def avgHoldingTime(results):
         holdingTimes =  results[i][4]
         holdingTimesTotal += holdingTimes
 
-    return np.mean(holdingTimesTotal)
+    print('Average Holding time: '+ str(np.mean(holdingTimesTotal)))
+    print('C.I at 95%: '+ str(sms.DescrStatsW(holdingTimesTotal).tconfint_mean(.05)))
+    print('C.I at 99%: ' + str(sms.DescrStatsW(holdingTimesTotal).tconfint_mean(.01)))

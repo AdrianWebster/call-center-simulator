@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce514cf2-8253-4515-8d23-1cdad05a697d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a5.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scratch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sim4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/working_a4.py" beforeDir="false" afterPath="$PROJECT_DIR$/working_a4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,12 +15,15 @@
     <SUITE FILE_PATH="coverage/untitled$scratch__1_.coverage" NAME="scratch (1) Coverage Results" MODIFIED="1542935048209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/assignment4$sim4.coverage" NAME="sim4 Coverage Results" MODIFIED="1543282682907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="assignment4" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/sim4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
+            <state relative-caret-position="348">
               <caret line="122" selection-start-line="122" selection-end-line="125" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -39,7 +38,7 @@
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
-              <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="92" />
+              <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="92" />
             </state>
           </provider>
         </entry>
@@ -47,8 +46,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/working_a4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="374">
+              <caret line="96" column="51" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,6 +60,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>service</find>
+      <find>hold</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,7 +79,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="845" />
+    <option name="x" value="764" />
     <option name="width" value="959" />
     <option name="height" value="1080" />
   </component>
@@ -294,7 +297,7 @@
       <workItem from="1543428886198" duration="285000" />
       <workItem from="1543429942747" duration="4388000" />
       <workItem from="1543451673180" duration="648000" />
-      <workItem from="1543532973265" duration="6347000" />
+      <workItem from="1543532973265" duration="13747000" />
     </task>
     <task id="LOCAL-00001" summary="working simulation">
       <created>1543576808971</created>
@@ -303,31 +306,54 @@
       <option name="project" value="LOCAL" />
       <updated>1543576808971</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="working simulation">
+      <created>1543576933168</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543576933168</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix typos, add functionality to answer questions, use only numpy, other general housekeeping / bug fixes">
+      <created>1543580226070</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543580226070</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45428000" />
+    <option name="totallyTimeSpent" value="52828000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12966916" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49925038" visible="true" weight="0.12966916" />
+      <window_info id="Structure" order="1" sideWeight="0.5015625" side_tool="true" weight="0.12966916" />
+      <window_info id="Favorites" order="2" sideWeight="0.50074965" side_tool="true" visible="true" weight="0.12966916" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32914045" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32914045" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32914045" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.067769475" side_tool="true" weight="0.30157068" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4994664" weight="0.32879582" />
-      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.93223053" weight="0.30083856" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4994664" weight="0.32809225" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.93223053" visible="true" weight="0.30083856" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -369,7 +395,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working simulation" />
-    <option name="LAST_COMMIT_MESSAGE" value="working simulation" />
+    <MESSAGE value="fix typos, add functionality to answer questions, use only numpy, other general housekeeping / bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix typos, add functionality to answer questions, use only numpy, other general housekeeping / bug fixes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sketch.py" />
@@ -395,22 +422,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/sim4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="122" selection-start-line="122" selection-end-line="125" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#1288#1352#0" />
-            <element signature="e#1410#3608#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="58" column="44" lean-forward="true" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="92" />
+          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="92" />
         </state>
       </provider>
     </entry>
@@ -444,10 +459,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/untitled.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="54" lean-forward="true" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/sim4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="122" selection-start-line="122" selection-end-line="125" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#1288#1352#0" />
+            <element signature="e#1410#3608#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/working_a4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="374">
+          <caret line="96" column="51" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
