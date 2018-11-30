@@ -98,7 +98,7 @@ def percentLost(results):
         lost = lost + instLost
         averages.append(instTotal/instLost)
 
-    print('Average Holding time: ' + str(total/lost))
+    print('Average Percent Lost: ' + str(total/lost))
     print('C.I at 95%: ' + str(sms.DescrStatsW(averages).tconfint_mean(.05)))
     print('C.I at 99%: ' + str(sms.DescrStatsW(averages).tconfint_mean(.01)))
 
