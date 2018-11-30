@@ -1,5 +1,5 @@
 # call-center-simulator
-done for business simulations, this time taking an alternate approach
+done for business simulations, this time taking an alternate approach.
 
 A	ticket	office	has	two	agents	answering	incoming	phone	calls.	In	addition,	a	third	caller	can	
 be	 put	 on	HOLD	 until	 one	 of	 the	agents	 becomes	available.	 If	all	 three	 phone	lines	 (both	
