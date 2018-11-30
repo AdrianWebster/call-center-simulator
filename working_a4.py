@@ -2,7 +2,7 @@ import numpy as np
 import statsmodels.stats.api as sms
 
 
-numpy.random.seed(7717679)
+np.random.seed(7717679)
 
 
 def generateCallsIn(workDayMinutes):
